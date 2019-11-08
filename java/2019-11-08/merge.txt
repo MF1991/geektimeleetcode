@@ -1,0 +1,14 @@
+public void merge(int[] nums1, int m, int[] nums2, int n) {
+         for (int i=m, k=0; i<nums1.length && k < n ; i++,k++) {
+        nums1[i] = nums2[k];
+    }
+    for (int j=0; j<nums1.length-1; j++) {
+        for (int h=0; h<nums1.length-1-j; h++) {
+            if (nums1[h] > nums1[h+1]) {
+                int temp = nums1[h+1];
+                nums1[h+1] = nums1[h];
+                nums1[h] = temp;
+            }
+        }
+    }
+    }
